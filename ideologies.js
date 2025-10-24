@@ -377,7 +377,26 @@ ideologies = [
             "acce": 70
         }
     },
+    {
+        "name": "Super duper based",
+        "stats": {
+            "reli": 92,
+            "govt": 78,
+            "orga": 100,
+            "acce": 96
+        }
+    },
+    {
+        "name": "Anti-Theist",
+        "stats": {
+            "reli": 100,
+            "govt": 100,
+            "orga": 100,
+            "acce": 50
+        }
+    },
 ];
+
 
 
 
