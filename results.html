@@ -21,34 +21,34 @@
 
 <h2>Religion Axis: <span class="weight-300" id="religion-label"></span></h2>
 <div class="axis">
-    <img id="img-equality" src="value_images/equality.svg" height="128pt"/>
-    <div class="bar equality" id="bar-equality"><div class="text-wrapper" id="equality"></div></div>
-    <div class="bar wealth" id="bar-wealth"><div class="text-wrapper" id="wealth"></div></div>
-    <img id="img-wealth" src="value_images/markets.svg" height="128pt"/>
+    <img id="img-irreligious" src="value_images/irreligious.svg" height="128pt"/>
+    <div class="bar irreligious" id="bar-irreligious"><div class="text-wrapper" id="irreligious"></div></div>
+    <div class="bar religious" id="bar-religious"><div class="text-wrapper" id="religious"></div></div>
+    <img id="img-religious" src="value_images/markets.svg" height="128pt"/>
 </div>
 <h2>Government Axis: <span class="weight-300" id="government-label"></span></h2>
 <div class="axis">
-    <img id="img-might" src="value_images/nation.svg" height="128pt"/>
-    <div class="bar might" id="bar-might"><div class="text-wrapper" id="might"></div></div>
-    <div class="bar peace" id="bar-peace"><div class="text-wrapper" id="peace"></div></div>
-    <img id="img-peace" src="value_images/globe.svg" height="128pt"/>
+    <img id="img-secular" src="value_images/nation.svg" height="128pt"/>
+    <div class="bar secular" id="bar-secular"><div class="text-wrapper" id="secular"></div></div>
+    <div class="bar theocratic" id="bar-theocratic"><div class="text-wrapper" id="theocratic"></div></div>
+    <img id="img-theocratic" src="value_images/globe.svg" height="128pt"/>
 </div>
 <h2>Organization Axis: <span class="weight-300" id="organization-label"></span></h2>
 <div class="axis">
-    <img id="img-liberty" src="value_images/liberty.svg" height="128pt"/>
-    <div class="bar liberty" id="bar-liberty"><div class="text-wrapper" id="liberty"></div></div>
-    <div class="bar authority" id="bar-authority"><div class="text-wrapper" id="authority"></div></div>
-    <img id="img-authority" src="value_images/authority.svg" height="128pt"/>
+    <img id="img-unorganized" src="value_images/unorganized.svg" height="128pt"/>
+    <div class="bar unorganized" id="bar-unorganized"><div class="text-wrapper" id="unorganized"></div></div>
+    <div class="bar organized" id="bar-organized"><div class="text-wrapper" id="organized"></div></div>
+    <img id="img-organized" src="value_images/organized.svg" height="128pt"/>
 </div>
 <h2>Acceptance Axis: <span class="weight-300" id="acceptance-label"></span></h2>
 <div class="axis">
-    <img id="img-tradition" src="value_images/tradition.svg" height="128pt"/>
-    <div class="bar tradition" id="bar-tradition"><div class="text-wrapper" id="tradition"></div></div>
-    <div class="bar progress" id="bar-progress"><div class="text-wrapper" id="progress"></div></div>
-    <img id="img-progress" src="value_images/progress.svg" height="128pt"/>
+    <img id="img-unaccepting" src="value_images/unaccepting.svg" height="128pt"/>
+    <div class="bar unaccepting" id="bar-unaccepting"><div class="text-wrapper" id="unaccepting"></div></div>
+    <div class="bar accepting" id="bar-accepting"><div class="text-wrapper" id="accepting"></div></div>
+    <img id="img-accepting" src="value_images/accepting.svg" height="128pt"/>
 </div>
 <h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
-<p>Ideological matching is a work in progress, and is much less accurate than the values and axes.</p>
+<p>Ideological matching is a work in accepting, and is much less accurate than the values and axes.</p>
 <p>You can send these results by copying and pasting the URL at the top of the page or using the image below. Think your matched ideology was wrong? Want to help us calibrate the test? Send the results along with your political ideology to us at eightvalues@gmail.com, or send us any comments, questions, or criticism. </p>
 <hr/>
 <img src="" id="banner">
@@ -108,37 +108,37 @@ stats"></a></div></noscript>
         	{return ""}
     }
 
-    equality  = getQueryVariable("e")
-    peace     = getQueryVariable("d")
-    liberty   = getQueryVariable("g")
-    progress  = getQueryVariable("s")
-    wealth    = (100 - equality).toFixed(1)
-    might     = (100 - peace   ).toFixed(1)
-    authority = (100 - liberty ).toFixed(1)
-    tradition = (100 - progress).toFixed(1)
+    irreligious  = getQueryVariable("e")
+    theocratic     = getQueryVariable("d")
+    unorganized   = getQueryVariable("g")
+    accepting  = getQueryVariable("s")
+    religious    = (100 - irreligious).toFixed(1)
+    secular     = (100 - theocratic   ).toFixed(1)
+    organized = (100 - unorganized ).toFixed(1)
+    unaccepting = (100 - accepting).toFixed(1)
 
-    setBarValue("equality", equality)
-    setBarValue("wealth", wealth)
-    setBarValue("peace", peace)
-    setBarValue("might", might)
-    setBarValue("liberty", liberty)
-    setBarValue("authority", authority)
-    setBarValue("progress", progress)
-    setBarValue("tradition", tradition)
+    setBarValue("irreligious", irreligious)
+    setBarValue("religious", religious)
+    setBarValue("theocratic", theocratic)
+    setBarValue("secular", secular)
+    setBarValue("unorganized", unorganized)
+    setBarValue("organized", organized)
+    setBarValue("accepting", accepting)
+    setBarValue("unaccepting", unaccepting)
 
-    document.getElementById("religion-label").innerHTML = setLabel(equality, reliArray)
-    document.getElementById("government-label").innerHTML = setLabel(peace, govtArray)
-    document.getElementById("organization-label").innerHTML = setLabel(liberty, orgaArray)
-    document.getElementById("acceptance-label").innerHTML = setLabel(progress, acceArray)
+    document.getElementById("religion-label").innerHTML = setLabel(irreligious, reliArray)
+    document.getElementById("government-label").innerHTML = setLabel(theocratic, govtArray)
+    document.getElementById("organization-label").innerHTML = setLabel(unorganized, orgaArray)
+    document.getElementById("acceptance-label").innerHTML = setLabel(accepting, acceArray)
 
     ideology = ""
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.reli - equality), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.orga - liberty), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.govt - peace), 1.73856063)
-        dist += Math.pow(Math.abs(ideologies[i].stats.acce - progress), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.reli - irreligious), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.orga - unorganized), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.govt - theocratic), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.acce - accepting), 1.73856063)
         if (dist < ideodist) {
             ideology = ideologies[i].name
             ideodist = dist
@@ -162,21 +162,21 @@ stats"></a></div></noscript>
         ctx.fillStyle = "#EEEEEE"
         ctx.fillRect(0,0,800,650);
 
-        img = document.getElementById("img-equality")
+        img = document.getElementById("img-irreligious")
         ctx.drawImage(img, 20, 170, 100, 100);
-        img = document.getElementById("img-wealth")
+        img = document.getElementById("img-religious")
         ctx.drawImage(img, 680, 170, 100, 100)
-        img = document.getElementById("img-might")
+        img = document.getElementById("img-secular")
         ctx.drawImage(img, 20, 290, 100, 100)
-        img = document.getElementById("img-peace")
+        img = document.getElementById("img-theocratic")
         ctx.drawImage(img, 680, 290, 100, 100)
-        img = document.getElementById("img-liberty")
+        img = document.getElementById("img-unorganized")
         ctx.drawImage(img, 20, 410, 100, 100)
-        img = document.getElementById("img-authority")
+        img = document.getElementById("img-organized")
         ctx.drawImage(img, 680, 410, 100, 100)
-        img = document.getElementById("img-tradition")
+        img = document.getElementById("img-unaccepting")
         ctx.drawImage(img, 20, 530, 100, 100)
-        img = document.getElementById("img-progress")
+        img = document.getElementById("img-accepting")
         ctx.drawImage(img, 680, 530, 100, 100)
 
         ctx.fillStyle="#222222"
@@ -185,21 +185,21 @@ stats"></a></div></noscript>
         ctx.fillRect(120, 420, 560, 80)
         ctx.fillRect(120, 540, 560, 80)
         ctx.fillStyle="#f44336"
-        ctx.fillRect(120, 184, 5.6*equality-2, 72)
+        ctx.fillRect(120, 184, 5.6*irreligious-2, 72)
         ctx.fillStyle="#00897b"
-        ctx.fillRect(682-5.6*wealth, 184, 5.6*wealth-2, 72)
+        ctx.fillRect(682-5.6*religious, 184, 5.6*religious-2, 72)
         ctx.fillStyle="#ff9800"
-        ctx.fillRect(120, 304, 5.6*might-2, 72)
+        ctx.fillRect(120, 304, 5.6*secular-2, 72)
         ctx.fillStyle="#03a9f4"
-        ctx.fillRect(682-5.6*peace, 304, 5.6*peace-2, 72)
+        ctx.fillRect(682-5.6*theocratic, 304, 5.6*theocratic-2, 72)
         ctx.fillStyle="#ffeb3b"
-        ctx.fillRect(120, 424, 5.6*liberty-2, 72)
+        ctx.fillRect(120, 424, 5.6*unorganized-2, 72)
         ctx.fillStyle="#3f51b5"
-        ctx.fillRect(682-5.6*authority, 424, 5.6*authority-2, 72)
+        ctx.fillRect(682-5.6*organized, 424, 5.6*organized-2, 72)
         ctx.fillStyle="#8bc34a"
-        ctx.fillRect(120, 544, 5.6*tradition-2, 72)
+        ctx.fillRect(120, 544, 5.6*unaccepting-2, 72)
         ctx.fillStyle="#9c27b0"
-        ctx.fillRect(682-5.6*progress, 544, 5.6*progress-2, 72)
+        ctx.fillRect(682-5.6*accepting, 544, 5.6*accepting-2, 72)
         ctx.fillStyle="#222222"
         ctx.font="700 80px Montserrat"
         ctx.textAlign="left"
@@ -208,15 +208,15 @@ stats"></a></div></noscript>
         ctx.fillText(ideology, 20, 140)
 
         ctx.textAlign="left"
-        if (equality  > 30) {ctx.fillText(equality + "%", 130, 237.5)}
-        if (might     > 30) {ctx.fillText(might + "%", 130, 357.5)}
-        if (liberty   > 30) {ctx.fillText(liberty + "%", 130, 477.5)}
-        if (tradition > 30) {ctx.fillText(tradition + "%", 130, 597.5)}
+        if (irreligious  > 30) {ctx.fillText(irreligious + "%", 130, 237.5)}
+        if (secular     > 30) {ctx.fillText(secular + "%", 130, 357.5)}
+        if (unorganized   > 30) {ctx.fillText(unorganized + "%", 130, 477.5)}
+        if (unaccepting > 30) {ctx.fillText(unaccepting + "%", 130, 597.5)}
         ctx.textAlign="right"
-        if (wealth    > 30) {ctx.fillText(wealth + "%", 670, 237.5)}
-        if (peace     > 30) {ctx.fillText(peace + "%", 670, 357.5)}
-        if (authority > 30) {ctx.fillText(authority + "%", 670, 477.5)}
-        if (progress  > 30) {ctx.fillText(progress + "%", 670, 597.5)}
+        if (religious    > 30) {ctx.fillText(religious + "%", 670, 237.5)}
+        if (theocratic     > 30) {ctx.fillText(theocratic + "%", 670, 357.5)}
+        if (organized > 30) {ctx.fillText(organized + "%", 670, 477.5)}
+        if (accepting  > 30) {ctx.fillText(accepting + "%", 670, 597.5)}
 
         ctx.font="300 30px Montserrat"
         ctx.fillText("8values.github.io", 780, 60)
