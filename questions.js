@@ -153,15 +153,6 @@ questions = [
         }
     },
     {
-        "question": "Society has moved past a need for religion.",
-        "effect": {
-            "reli": 10,
-            "govt": 0,
-            "orga": 0,
-            "acce": 0
-        }
-    },
-    {
         "question": "Having a formal church is oppressive.",
         "effect": {
             "reli": 0,
@@ -351,6 +342,7 @@ questions = [
         }
     },
 ];
+
 
 
 
