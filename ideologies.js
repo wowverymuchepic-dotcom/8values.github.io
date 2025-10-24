@@ -38,8 +38,8 @@ ideologies = [
     {
         "name": "Theocrat",
         "stats": {
-            "reli": 0,
-            "govt": 0,
+            "reli": 10,
+            "govt": 10,
             "orga": 40,
             "acce": 40
         }
@@ -47,16 +47,16 @@ ideologies = [
     {
         "name": "Ecclesiasticist",
         "stats": {
-            "reli": 0,
+            "reli": 10,
             "govt": 40,
-            "orga": 0,
+            "orga": 10,
             "acce": 25
         }
     },
     {
         "name": "Religious Liberal",
         "stats": {
-            "reli": 0,
+            "reli": 10,
             "govt": 50,
             "orga": 85,
             "acce": 100
@@ -65,7 +65,7 @@ ideologies = [
     {
         "name": "Anarchist Theist",
         "stats": {
-            "reli": 0,
+            "reli": 10,
             "govt": 50,
             "orga": 100,
             "acce": 100
@@ -83,7 +83,7 @@ ideologies = [
     {
         "name": "Omnist",
         "stats": {
-            "reli": 0,
+            "reli": 10,
             "govt": 50,
             "orga": 100,
             "acce": 100
@@ -92,10 +92,10 @@ ideologies = [
     {
         "name": "Fundamentalist",
         "stats": {
-            "reli": 0,
+            "reli": 10,
             "govt": 25,
-            "orga": 0,
-            "acce": 0
+            "orga": 10,
+            "acce": 10
         }
     },
     {
@@ -111,18 +111,18 @@ ideologies = [
         "name": "Atheist Theocrat",
         "stats": {
             "reli": 100,
-            "govt": 0,
-            "orga": 0,
-            "acce": 0
+            "govt": 10,
+            "orga": 10,
+            "acce": 10
         }
     },
     {
         "name": "Chauvinist",
         "stats": {
-            "reli": 0,
+            "reli": 10,
             "govt": 25,
-            "orga": 0,
-            "acce": 0
+            "orga": 10,
+            "acce": 10
         }
     },
     {
@@ -139,15 +139,15 @@ ideologies = [
         "stats": {
             "reli": 25,
             "govt": 50,
-            "orga": 0,
+            "orga": 10,
             "acce": 25
         }
     },
     {
         "name": "Syncretist Theocrat",
         "stats": {
-            "reli": 0,
-            "govt": 0,
+            "reli": 10,
+            "govt": 10,
             "orga": 85,
             "acce": 100
         }
@@ -164,7 +164,7 @@ ideologies = [
     {
         "name": "Animist",
         "stats": {
-            "reli": 0,
+            "reli": 10,
             "govt": 40,
             "orga": 100,
             "acce": 100
@@ -281,7 +281,7 @@ ideologies = [
     {
         "name": "Orthodox",
         "stats": {
-            "reli": 0,
+            "reli": 10,
             "govt": 40,
             "orga": 10,
             "acce": 25
@@ -290,7 +290,7 @@ ideologies = [
     {
         "name": "Reform",
         "stats": {
-            "reli": 0,
+            "reli": 10,
             "govt": 70,
             "orga": 70,
             "acce": 85
@@ -326,13 +326,59 @@ ideologies = [
     {
         "name": "Apolitical Fundamentalist",
         "stats": {
-            "reli": 0,
+            "reli": 10,
             "govt": 50,
-            "orga": 0,
-            "acce": 0
+            "orga": 10,
+            "acce": 10
+        }
+    },
+    {
+        "name": "Atheist Liberal",
+        "stats": {
+            "reli": 100,
+            "govt": 85,
+            "orga": 100,
+            "acce": 100
+        }
+    },
+    {
+        "name": "Agnostic Liberal",
+        "stats": {
+            "reli": 70,
+            "govt": 85,
+            "orga": 100,
+            "acce": 100
+        }
+    },
+    {
+        "name": "Secular Liberal",
+        "stats": {
+            "reli": 85,
+            "govt": 85,
+            "orga": 100,
+            "acce": 100
+        }
+    },
+    {
+        "name": "Opinionated",
+        "stats": {
+            "reli": 100,
+            "govt": 100,
+            "orga": 10,
+            "acce": 10
+        }
+    },
+    {
+        "name": "Religious Moderate",
+        "stats": {
+            "reli": 25,
+            "govt": 55,
+            "orga": 70,
+            "acce": 70
         }
     },
 ];
+
 
 
 
