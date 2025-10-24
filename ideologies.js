@@ -140,7 +140,7 @@ ideologies = [
             "reli": 25,
             "govt": 50,
             "orga": 0,
-            "acce": 0
+            "acce": 25
         }
     },
     {
@@ -333,6 +333,7 @@ ideologies = [
         }
     },
 ];
+
 
 
 
